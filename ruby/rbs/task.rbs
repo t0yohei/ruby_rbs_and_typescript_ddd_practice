@@ -1,0 +1,11 @@
+# typeprof ruby/runner/task.rb
+# TypeProf 0.12.0
+
+# Classes
+class Task
+  attr_accessor id: Integer
+  attr_accessor task_status: String
+  attr_accessor name: String
+  attr_accessor due_date: Time
+  attr_accessor postpone_count: Integer
+end
