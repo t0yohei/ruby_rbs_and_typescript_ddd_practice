@@ -1,6 +1,6 @@
 class Task {
   private id: number;
-  private taskStatus: any;
+  private taskStatus: TaskStatus;
   private name: string;
   private dueDate: Date;
   private postponeCount: number;
@@ -13,5 +13,43 @@ class Task {
     this.id = newId;
   }
 
-  // 他のも同様
+  public getTaskStatus(): TaskStatus {
+    return this.taskStatus;
+  }
+
+  public setTaskStatus(taskStatus: TaskStatus): void {
+    this.taskStatus = taskStatus;
+  }
+
+  public getName(): string {
+    return this.name;
+  }
+
+  public setName(name: string): void {
+    this.name = name;
+  }
+
+  public getDueDate(): Date {
+    return this.dueDate;
+  }
+
+  public setDueDate(dueDate: Date): void {
+    this.dueDate = dueDate;
+  }
+
+  public getPostponeCount(): number {
+    return this.postponeCount;
+  }
+
+  public setPostponeCount(postponeCount: number): void {
+    this.postponeCount = postponeCount;
+  }
 }
+
+export enum TaskStatus {
+  UNDONE,
+  DOING,
+  DONE,
+}
+
+export default Task;
