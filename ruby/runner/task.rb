@@ -1,4 +1,4 @@
-require_relative '../task'
+require_relative '../lib/task'
 
 task = Task.new
 task.id = 1
